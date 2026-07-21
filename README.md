@@ -2,7 +2,7 @@
 This repository provides a dataset and a trained MLP-based model for non-intrusive classification of water consumption events from flow sensor time series, including preprocessing components and evaluation tools to support reproducible research.
 
 # Modelling individual residential water uses using machine learning algorithms 
-This repository provides a dataset and a trained MLP-based model for non-intrusive classification of water consumption events from flow sensor time series, including preprocessing components and evaluation tools.The files correspond to the final model trained after expanding the training dataset.
+This repository provides a dataset and two scripts. One  MLP-based and other KNN-basead for non-intrusive classification of water consumption events from flow sensor time series, including preprocessing script 
 
 ---
 
