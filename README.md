@@ -11,6 +11,7 @@ This repository provides a dataset and two scripts. One  MLP-based and other KNN
 The objective of this work is to classify water consumption patterns based on smart sensor data, using Machine Learning techniques and signal preprocessing methods.
 
 ---
+
 ## Dataset Description
 The features.txt file contains four numerical features extracted from each water consumption event, together with the corresponding class label.
 
@@ -22,18 +23,20 @@ The input features are:
 - Number of repetitions of the predominant event in the signal.
 The class label identifies the corresponding residential water use category.
 
-The time_series/ directory contains the time series from which the features were extracted. 
+The time_series/ directory contains the time series from which the features were extracted.
+
 ---
 
 ## Model
 
-# Multilayer Perceptron (MLP) 
+### Multilayer Perceptron (MLP) 
 
 The network architecture and training parameters are defined in ANN.py.
 
-# K-Nearest Neighbors (KNN)
+### K-Nearest Neighbors (KNN)
 
 The model configuration, hyperparameter selection, and evaluation procedures are defined in KNN.py.
+
 ---
 
 ## Preprocessing
