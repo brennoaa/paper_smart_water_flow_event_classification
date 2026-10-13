@@ -11,27 +11,29 @@ This repository provides a dataset and two scripts. One  MLP-based and other KNN
 The objective of this work is to classify water consumption patterns based on smart sensor data, using Machine Learning techniques and signal preprocessing methods.
 
 ---
+## Dataset Description
+The features.txt file contains four numerical features extracted from each water consumption event, together with the corresponding class label.
+
+The input features are:
+
+- Event duration.
+- Median flow rate during the event.
+- Flow rate decreasing time.
+- Number of repetitions of the predominant event in the signal.
+The class label identifies the corresponding residential water use category.
+
+The time_series/ directory contains the time series from which the features were extracted. 
+---
 
 ## Model
 
-A Multilayer Perceptron (MLP) neural network was used with the following architecture:
+# Multilayer Perceptron (MLP) 
 
-- Input layer with 4 features: (i) the duration of the event, (ii) the median flow rate of the event, (iii) the flow rate decreasing time, (iv) the number of repetitions of the predominant event in the signal 
-- Dense layer with 32 neurons (ReLU)  
-- Batch Normalization  
-- Dropout (0.2)  
-- Dense layer with 16 neurons (ReLU)  
-- Output layer with Softmax activation and 8 classes: Flush toilet 1, Flush toilet 2, Flush toilet 3, Shower, Filter, Washing machine, Tap 1, Kitchen tap  
+The network architecture and training parameters are defined in ANN.py.
 
+# K-Nearest Neighbors (KNN)
 
-A K-Nearest Neighbors (KNN) classifier was configured as follows:
-
-- Input features: (i) event duration, (ii) median flow rate, (iii) flow rate decreasing time, and (iv) number of repetitions of the predominant event in the signal.
-- Hyperparameter optimization: the number of neighbors (k) was selected using Grid Search with 5-fold cross-validation, evaluating values from 1 to 10.
-- Classification algorithm: K-Nearest Neighbors (KNN).
-- Distance metric: Minkowski distance (p=2, equivalent to Euclidean distance).
-- Neighbor weighting: Uniform.
-- Model evaluation: 10-fold cross-validation on the training set.
+The model configuration, hyperparameter selection, and evaluation procedures are defined in KNN.py.
 ---
 
 ## Preprocessing
@@ -55,9 +57,11 @@ The model is evaluated using:
 
 ## Project Files
 
-- `data.txt` → dataset  
+- `features.txt` → Extracted numerical features and their corresponding class labels.
+- `time_series/` → Time series used for feature extraction, organized by class.
 - `pre_processing.py` → pre_processing script  
 - `ANN.py` → model ANN script  
-- `KNN.py` → model KNN script  
+- `KNN.py` → model KNN script
+
 
 ---
