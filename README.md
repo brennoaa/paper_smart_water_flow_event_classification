@@ -21,6 +21,7 @@ The input features are:
 - Median flow rate during the event.
 - Flow rate decreasing time.
 - Number of repetitions of the predominant event in the signal.
+  
 The class label identifies the corresponding residential water use category.
 
 ---
