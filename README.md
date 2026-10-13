@@ -23,8 +23,6 @@ The input features are:
 - Number of repetitions of the predominant event in the signal.
 The class label identifies the corresponding residential water use category.
 
-The time_series/ directory contains the time series from which the features were extracted.
-
 ---
 
 ## Model
@@ -61,7 +59,6 @@ The model is evaluated using:
 ## Project Files
 
 - `features.txt` → Extracted numerical features and their corresponding class labels.
-- `time_series/` → Time series used for feature extraction, organized by class.
 - `pre_processing.py` → pre_processing script  
 - `ANN.py` → model ANN script  
 - `KNN.py` → model KNN script
