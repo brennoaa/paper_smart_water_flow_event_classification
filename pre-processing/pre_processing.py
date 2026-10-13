@@ -167,14 +167,14 @@ def extrair_atributos(vetor, x):
         tempoDescida = 0
         T = T/repeticao
     
-    a = [T, mediana, tempoDescida, repeticao, x]
+    a = [T, mediana, tempoDescida, repeticao]
     
     return a
 
 # =========================================================
 # CONFIGURAÇÃO
 # =========================================================
-LIMITE_MINUTOS = 6
+LIMITE_MINUTOS = 5
 
 # =========================================================
 # EXTRAIR DATA/HORA DO NOME DO ARQUIVO
