@@ -24,17 +24,16 @@ X_train, X_test, y_train, y_test = train_test_split(X, Y_encoded, test_size=0.3,
 # Criar o modelo
 model = tf.keras.Sequential()
 
-# Camada de entrada (6 atributos numéricos)
+# Camada de entrada 
 model.add(tf.keras.layers.Input(shape=(4,)))
 
 # Camadas ocultas
-model.add(tf.keras.layers.Dense(64, activation='relu'))
-
-# 🔥 Nova camada oculta de 32 neurônios
 model.add(tf.keras.layers.Dense(32, activation='relu'))
 
+# Nova camada oculta 
+model.add(tf.keras.layers.Dense(16, activation='relu'))
 
-# Camada de saída para 3 classes (Softmax para classificação)
+# Camada de saída (Softmax para classificação)
 model.add(tf.keras.layers.Dense(10, activation='softmax'))
 
 # Resumo do modelo
